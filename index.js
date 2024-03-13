@@ -7,9 +7,7 @@ require("dotenv").config({ path: "sample.env" });
 const { MongoClient } = require("mongodb");
 
 const uri = process.env.DB_URI;
-/* const uri =
-  "mongodb+srv://dbUser:JacB3Bf3tvCyEvWi@cluster0.ncxkgkc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
- */
+
 console.log(uri);
 const client = new MongoClient(uri);
 const db = client.db("urlshortener");
